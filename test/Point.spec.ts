@@ -45,5 +45,15 @@ describe("test Point", () => {
     expect(p.getCoordinate()).to.deep.equal([]);
     });
 
+    it("should clone a Point", () => {
+    const p1 = new Point([3, 4]);
+    const p2 = p1.clone();
+
+    p2.translate(10, 10);
+
+    expect(p1.getCoordinate()).to.deep.equal([3, 4]);
+    expect(p2.getCoordinate()).to.deep.equal([13, 14]);
+    });
+
 });
 
