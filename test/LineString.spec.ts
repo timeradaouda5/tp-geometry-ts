@@ -46,5 +46,17 @@ describe("test LineString", () => {
     expect(line2.isEmpty()).to.be.false;
     });
 
+    it("should translate a LineString", () => {
+    const line = new LineString([
+        new Point([1, 2]),
+        new Point([3, 4])
+    ]);
+
+    line.translate(2, 5);
+
+    expect(line.getPointN(0).getCoordinate()).to.deep.equal([3, 7]);
+    expect(line.getPointN(1).getCoordinate()).to.deep.equal([5, 9]);
+    });
+
 });
 

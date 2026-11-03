@@ -28,5 +28,22 @@ describe("test Point", () => {
     expect(p2.isEmpty()).to.be.false;
     });
 
+    it("should translate a Point", () => {
+    const p = new Point([3, 4]);
+
+    p.translate(2, 5);
+
+    expect(p.getCoordinate()).to.deep.equal([5, 9]);
+    });
+
+    it("should not translate an empty Point", () => {
+    const p = new Point();
+
+    p.translate(2, 5);
+
+    expect(p.isEmpty()).to.be.true;
+    expect(p.getCoordinate()).to.deep.equal([]);
+    });
+
 });
 
