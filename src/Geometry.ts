@@ -1,4 +1,5 @@
 
 export default interface Geometry {
-    getType(): String
+    getType(): String;
+    isEmpty(): boolean;
 }

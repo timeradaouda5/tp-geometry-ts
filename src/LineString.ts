@@ -13,6 +13,10 @@ export default class LineString implements Geometry {
         return "LineString";
     }
 
+    isEmpty(): boolean {
+    return this.points.length === 0;
+    }
+
     getNumPoints(): number {
         return this.points.length;
     }

@@ -38,5 +38,13 @@ describe("test LineString", () => {
         expect(g.getType()).to.equal("LineString");
     });
 
+    it("should test isEmpty()", () => {
+    const line1 = new LineString();
+    expect(line1.isEmpty()).to.be.true;
+
+    const line2 = new LineString([new Point([3, 4])]);
+    expect(line2.isEmpty()).to.be.false;
+    });
+
 });
 
