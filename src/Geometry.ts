@@ -1,7 +1,9 @@
+import Envelope from "./Envelope";
 
 export default interface Geometry {
     getType(): String;
     isEmpty(): boolean;
     translate(dx: number, dy: number): void;
     clone(): Geometry;
+    getEnvelope(): Envelope;
 }
